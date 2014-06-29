@@ -1,0 +1,11 @@
+# Install packages
+yum install rpm-build redhat-rpm-config
+yum groupinstall "Development tools"
+
+# Create Environment Folders 
+mkdir -p ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
+
+# Create rpmmacros 
+vim ~/.rpmmacros
+%_topdir %(echo $HOME)/rpmbuild
+%_tmppath %(echo $HOME)/rpmbuild/tmp
