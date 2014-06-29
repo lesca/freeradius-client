@@ -9,3 +9,6 @@ mkdir -p ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
 vim ~/.rpmmacros
 %_topdir %(echo $HOME)/rpmbuild
 %_tmppath %(echo $HOME)/rpmbuild/tmp
+
+# To build rpm package for freeradius-client
+rpmbuild -ba ~/rpmbuild/SPECS/freeradius-client.spec
