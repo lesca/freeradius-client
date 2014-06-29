@@ -1,18 +1,26 @@
-# Install packages
-yum install rpm-build redhat-rpm-config
-yum groupinstall "Development tools"
+Setps to build freeradius-client rpm package
+----------------------
 
-# Create Environment Folders 
-mkdir -p ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
+Install packages
+----------------------
+- yum install rpm-build redhat-rpm-config
+- yum groupinstall "Development tools"
 
-# Create rpmmacros 
-vim ~/.rpmmacros
-%_topdir %(echo $HOME)/rpmbuild
-%_tmppath %(echo $HOME)/rpmbuild/tmp
+Create Environment Folders
+----------------------
+- mkdir -p ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
 
-# Download source
-cd ~/rpmbuild/SOURCES
-wget -c ftp://ftp.freeradius.org/pub/freeradius/freeradius-client-1.1.6.tar.gz
+Create rpmmacros 
+----------------------
+- vim ~/.rpmmacros
+- %_topdir %(echo $HOME)/rpmbuild
+- %_tmppath %(echo $HOME)/rpmbuild/tmp
 
-# To build rpm package for freeradius-client
-rpmbuild -ba ~/rpmbuild/SPECS/freeradius-client.spec
+Download source
+----------------------
+- cd ~/rpmbuild/SOURCES
+- wget -c ftp://ftp.freeradius.org/pub/freeradius/freeradius-client-1.1.6.tar.gz
+
+To build rpm package for freeradius-client
+----------------------
+- rpmbuild -ba ~/rpmbuild/SPECS/freeradius-client.spec
