@@ -1,5 +1,9 @@
-Setps to build freeradius-client rpm package
-----------------------
+To Use Packaged RPM
+======================
+- wget --no-check-certificate https://github.com/lesca/freeradius-client/raw/master/freeradius-client-1.1.6-0.x86_64.rpm
+
+To Build RPM
+======================
 
 Install packages
 ----------------------
